@@ -17,11 +17,12 @@ namespace NoDeathcare.Detours
                 {
                     return;
                 }
-                if (data.Dead)
+                //Shit's impossible to reach because !data.Dead and data.Dead must be true
+                /*if (data.Dead)
                 {
                     Singleton<CitizenManager>.instance.ReleaseCitizen(citizenID);
                     return;
-                }
+                }*/
             }
             //end mod
             if (!data.Dead)
@@ -33,10 +34,11 @@ namespace NoDeathcare.Detours
                     return;
                 }
                 //begin mod
-                if (data.Dead)
+                //Shit's impossible to reach, same reason as before
+                /*if (data.Dead)
                 {
                     Singleton<CitizenManager>.instance.ReleaseCitizen(citizenID);
-                }
+                }*/
                 //end mod
                 this.UpdateWellbeing(citizenID, ref data);
                 this.UpdateWorkplace(citizenID, ref data);
@@ -48,14 +50,13 @@ namespace NoDeathcare.Detours
         [RedirectReverse]
         private void UpdateHome(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
+            return;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         [RedirectReverse]
         private bool UpdateHealth(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
             return true;
         }
 
@@ -63,7 +64,6 @@ namespace NoDeathcare.Detours
         [RedirectReverse]
         private bool UpdateAge(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
             return true;
         }
 
@@ -71,21 +71,21 @@ namespace NoDeathcare.Detours
         [RedirectReverse]
         private void UpdateWellbeing(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
+            return;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         [RedirectReverse]
         private void UpdateWorkplace(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
+            return;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         [RedirectReverse]
         private void UpdateLocation(uint citizenID, ref Citizen data)
         {
-            UnityEngine.Debug.Log("Help us Obi");
+            return;
         }
     }
 }
